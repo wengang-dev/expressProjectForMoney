@@ -1,38 +1,232 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+html,
+body,
+#root,
 .App {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 400px) {
+  :root {
+    font-size: 50px;
+  }
+  .search-result-container,
+  .search-box,
+  .search-result-container__close {
+    width: 99vw;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 500px) {
+  :root {
+    font-size: 60px;
+  }
+  .search-result-container,
+  .search-box,
+  .search-result-container__close {
+    width: 94vw;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+  :root {
+    font-size: 70px;
+  }
+  .search-result-container,
+  .search-box,
+  .search-result-container__close {
+    width: 89vw;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 700px) {
+  :root {
+    font-size: 80px;
+  }
+  .search-result-container,
+  .search-box,
+  .search-result-container__close {
+    width: 85vw;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 800px) {
+  :root {
+    font-size: 90px;
+  }
+  .search-result-container,
+  .search-box,
+  .search-result-container__close {
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 800px) {
+  :root {
+    font-size: 100px;
+  }
+  .search-result-container,
+  .search-box,
+  .search-result-container__close {
+    width: 80vw;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 10vh;
+  text-align: left;
+  background-image: url(http://www.ehitong.com/upload/image/EHT35log.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.content {
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-3d-technology-business-background-illustration-image_187897.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  display: inline-block;
+}
+
+.search-box {
+  background: #f89843;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: content-box;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+.search-box::after {
+  content: '顺丰需输入电话尾号，例：+1234';
+  position: absolute;
+  font-size: 12px;
+  color: white;
+  bottom: -10px;
+  transform: translate(0, 100%);
+}
+
+.search-box__menu {
+  height: 100%;
+  width: 1.5rem;
+  line-height: 60px;
+  text-align: center;
+  position: relative;
+  user-select: none;
+}
+.search-box__menu-btn {
+  display: block;
+  width: 1.4rem;
+  padding: 0 10px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-size: 0.2rem;
+  background: #f89b49;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.search-box__menu-list {
+  border: 1px solid gray;
+  border-left: 0;
+  z-index: 2;
+  transform: translateY(100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2rem;
+  background: white;
+}
+.search-box__menu-list li {
+  text-indent: 10px;
+  width: 100%;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+.search-box__menu-list li:hover {
+  background: rgb(230, 227, 227);
+  color: #f1903b;
+}
+
+.search-box__input-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.search-box__input {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  box-sizing: border-box;
+  text-indent: 10px;
+  line-height: 60px;
+  float: left;
+  border: 0;
+}
+
+.search-box__submit {
+  width: 1.5rem;
+  white-space: nowrap;
+  height: 100%;
+  font-size: 0.2rem;
+  line-height: 60px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-result-container {
+  position: relative;
+  margin: 0 auto;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-result-container__close {
+  padding: 0 0.1rem;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: gray;
+  text-align: right;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 0.1rem;
+  background: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-result-container__close:hover {
+  color: #ff7800;
+}
+
+.expressProcesItem {
+  width: 100%;
+  padding: 0.2rem 0.1rem;
+  font-size: 14px;
+  box-sizing: border-box;
   display: flex;
+}
+
+.expressProcesItem__time {
+  width: 1.4rem;
+  display: flex;
+  line-height: 20px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.expressProcesItem__action {
+  text-align: justify;
+  width: 100%;
+  line-height: 20px;
+  padding: 0 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.recentlyAction {
+  color: #ff7800;
 }
