@@ -85,7 +85,6 @@ body,
   background-image: url(https://png.pngtree.com/thumb_back/fh260/back_our/20190621/ourmid/pngtree-3d-technology-business-background-illustration-image_187897.jpg);
   background-size: cover;
   width: 100%;
-  height: 90vh;
   position: relative;
   display: inline-block;
 }
@@ -180,6 +179,12 @@ body,
   text-align: center;
 }
 
+.search-result-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .search-result-container {
   position: relative;
   margin: 0 auto;
@@ -229,4 +234,70 @@ body,
 
 .recentlyAction {
   color: #ff7800;
+}
+
+.overseaList {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-content: flex-start;
+  margin: 40px auto;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.overseaExpressItem {
+  width: 100%;
+  padding: 10px;
+}
+
+.overseaExpressItem a {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 12px;
+}
+
+.expressItem__avatar {
+  min-width: 150px;
+  min-height: 80px;
+  width: 50%;
+  height: 50%;
+  max-width: 300px;
+  max-height: 120px;
+}
+
+.expressItem__avatar img {
+  min-width: 150px;
+  min-height: 80px;
+  width: 100%;
+  height: 100%;
+}
+
+.expressItem__info {
+  padding-top: 0.1rem;
+  width: 100%;
+  line-height: 20px;
+  padding-left: 10px;
+  color: white;
+}
+
+.expressItem__info__name {
+  font-weight: 500;
+}
+
+.expressItem__info__userCrad__upload{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.expressItem__info__userCrad__url {
+  width: 85%;
+  box-sizing: border-box;
+  word-break: break-all;
+  white-space: normal;
 }

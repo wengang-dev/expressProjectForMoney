@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from './components/menu';
+import OverseaList from './components/overseaList'
 import axios from 'axios';
 import md5 from 'blueimp-md5';
 import classname from 'classname';
@@ -96,7 +97,7 @@ class App extends React.Component {
     }
     this.setState({ expressInfoStatus: true });
     const str =
-      '/poll/query.do?customer=43E701842F700404237842A7AD6F0B9A&sign=' +
+      '../seach.php?customer=43E701842F700404237842A7AD6F0B9A&sign=' +
       sign +
       '&param=' +
       JSON.stringify(param);
@@ -142,15 +143,18 @@ class App extends React.Component {
               查询
             </div>
           </div>
-          {expressInfoStatus && (
-            <div
-              className="search-result-container__close"
-              onClick={this.handleCloseClick}
-            >
-              ×
-            </div>
-          )}
-          {this.showExpressActions()}
+          <div className="search-result-box">
+            {expressInfoStatus && (
+              <div
+                className="search-result-container__close"
+                onClick={this.handleCloseClick}
+              >
+                ×
+              </div>
+            )}
+            {this.showExpressActions()}
+          </div>
+          <OverseaList />
         </div>
       </div>
     );

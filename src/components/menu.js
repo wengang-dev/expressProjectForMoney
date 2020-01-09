@@ -4,24 +4,24 @@ export default class Menu extends React.Component {
     super(props);
     this.state = {
       expressList: [
+        { name: '天马迅达', val: 'tianma' },
+        { name: '顺丰速运', val: 'shunfeng' },
         { name: '贝海国际速递', val: 'xlobo' },
         { name: '递四方', val: 'disifang' },
         { name: '递四方美国', val: 'disifangus' },
         { name: '递四方澳洲', val: 'disifangau' },
         { name: '天马迅达', val: 'tianma' },
+        { name: '长江', val: 'changjiang' },
+        { name: 'EWE', val: 'ewe' },
         { name: '泛捷国际速递', val: 'epanex' },
-        { name: '顺丰速运', val: 'shunfeng' },
-        {
-          name: '蜂鸟国际速递',
-          val: '',
-          href: ' http://www.hummerexpress.com/UploadIDPic'
-        },
-        {
-          name: 'E2G速递',
-          val: '',
-          href: 'https://www.express2global.com/yundan/upload.php '
-        },
-        { name: 'GOOD国际速递', val: '', href: ' www.goodkuaidi.com' }
+        { name: '申通快递', val: 'shentong' },
+        { name: '天翼快递', val: 'tykd ' },
+        { name: '圆通快递', val: 'yuantong' },
+        { name: 'EMS', val: 'ems' },
+        { name: '中通快递', val: 'zhongtong' },
+        { name: '韵达', val: 'yunda' },
+        { name: '京东快递', val: 'jd' },
+        { name: '百世快递', val: 'huitongkuaidi' }
       ],
       status: false
     };
